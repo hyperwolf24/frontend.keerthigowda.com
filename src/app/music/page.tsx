@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { Metadata } from 'next'
 import { musicMetadata } from '../metadata'
 import styles from './music.module.css'
 

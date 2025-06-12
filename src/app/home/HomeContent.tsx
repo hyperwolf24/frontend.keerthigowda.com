@@ -10,7 +10,8 @@ const names = [
   { lang: 'tamil', text: 'கீர்த்தி கவுடா' },
   { lang: 'sanskrit', text: 'कीर्तिः गौडा' },
   { lang: 'telugu', text: 'కీర్తి గౌడ' },
-  { lang: 'japanese', text: 'ケエルティ ゴウダ' }
+  { lang: 'japanese', text: 'ケエルティ ゴウダ' },
+  { lang: 'russian', text: 'Кирти Гоуда' }
 ]
 
 export default function HomeContent() {
@@ -51,7 +52,7 @@ export default function HomeContent() {
           />
         </div>
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-[#ccd6f6]">
-          Hi, I'm{' '}
+          Hi, I&apos;m{' '}
           <span
             className="text-[#64ffda] cursor-pointer transition-opacity duration-300"
             style={{ opacity: isTransitioning ? 0 : 1 }}

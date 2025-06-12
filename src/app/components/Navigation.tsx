@@ -2,11 +2,9 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const pathname = usePathname()
 
   return (
     <nav className="navbar">
@@ -14,19 +12,25 @@ export default function Navigation() {
         KG
       </Link>
       <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-        <Link href="/" className={pathname === '/' ? 'active' : ''}>
+        <Link href="/">
           Home
         </Link>
-        <Link href="/music" className={pathname === '/music' ? 'active' : ''}>
+        <Link href="/music">
           Music
         </Link>
-        <Link href="/farm" className={pathname === '/farm' ? 'active' : ''}>
+        <Link href="/farm">
           Farm
         </Link>
-        <Link href="/about" className={pathname === '/about' ? 'active' : ''}>
+        <Link href="/chandi">
+          Project Chandi
+        </Link>
+        <Link href="/elements">
+          Project Elements
+        </Link>
+        <Link href="/about">
           About
         </Link>
-        <Link href="/contact" className={pathname === '/contact' ? 'active' : ''}>
+        <Link href="/contact">
           Contact
         </Link>
       </div>

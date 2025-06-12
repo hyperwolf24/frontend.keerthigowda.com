@@ -1,4 +1,3 @@
-import { Metadata } from 'next'
 import { contactMetadata } from '../metadata'
 import styles from './contact.module.css'
 
