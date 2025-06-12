@@ -1,0 +1,48 @@
+.section {
+  @apply min-h-screen flex items-center justify-center px-4 py-12 relative z-10;
+}
+
+.content {
+  @apply max-w-2xl mx-auto text-center p-8 rounded-lg;
+  background: rgba(17, 34, 64, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(1, 140, 109, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  @apply text-4xl font-bold mb-12;
+  color: #018c6d;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.contactInfo {
+  @apply flex flex-col sm:flex-row justify-center items-center gap-6;
+}
+
+.contactLink {
+  @apply flex items-center gap-3 px-6 py-3 rounded-lg transition-all duration-300;
+  background: rgba(1, 140, 109, 0.1);
+  color: #018c6d;
+  border: 1px solid rgba(1, 140, 109, 0.2);
+}
+
+.contactLink:hover {
+  background: rgba(1, 140, 109, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(1, 140, 109, 0.2);
+}
+
+.contactLink i {
+  @apply text-xl;
+}
+
+@media (max-width: 640px) {
+  .contactInfo {
+    @apply flex-col;
+  }
+  
+  .contactLink {
+    @apply w-full;
+  }
+} 
