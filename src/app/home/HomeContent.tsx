@@ -40,11 +40,10 @@ export default function HomeContent() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center">
-      <div className="absolute inset-0 bg-[url('/images/farm-background.jpg')] bg-cover bg-center opacity-20"></div>
       <div className="relative z-10 text-center">
         <div className="relative w-64 h-64 mx-auto mb-8 rounded-full overflow-hidden">
           <Image
-            src="/images/keerthi-gowda3.jpeg"
+            src="/images/keerthi-gowda3.webp"
             alt="Keerthi Gowda"
             fill
             className="object-cover"

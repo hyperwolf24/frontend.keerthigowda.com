@@ -13,7 +13,7 @@ export default function WeddingElements() {
       <div className="max-w-4xl mx-auto">
         <div className="relative w-full h-[32rem] rounded-lg overflow-hidden mb-12">
           <Image
-            src="/images/wedding-candid.jpg"
+            src="/images/wedding-candid.webp"
             alt="Wedding Candid Photography"
             fill
             className="object-cover"

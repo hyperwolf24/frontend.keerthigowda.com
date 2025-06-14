@@ -14,14 +14,30 @@ const ibmPlexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://keerthigowda.com'),
-  title: 'Keerthi Gowda',
+  title: {
+    default: 'Keerthi Gowda',
+    template: '%s | Keerthi Gowda',
+  },
   description: 'Official website of Keerthi Gowda - Software Engineer, farmer, and more.',
   keywords: 'Keerthi Gowda, music, farming',
   authors: [{ name: 'Keerthi Gowda' }],
+  creator: 'Keerthi Gowda',
+  publisher: 'Keerthi Gowda',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  icons: {
+    icon: '/icons/favicon-96x96.png',
+    apple: '/icons/apple-icon-precomposed.png',
+  },
   openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'Keerthi Gowda',
     title: 'Keerthi Gowda',
     description: 'Official website of Keerthi Gowda',
-    type: 'website',
     images: ['/images/keerthi-profile.jpg'],
   },
   twitter: {
@@ -29,9 +45,24 @@ export const metadata: Metadata = {
     title: 'Keerthi Gowda',
     description: 'Official website of Keerthi Gowda',
     images: ['/images/keerthi-profile.jpg'],
+    creator: '@keerthigowda',
   },
   verification: {
     google: 'MPqjuuwDV6FcA6-ESZFgeZNTVnMOrin1IM6YyJpZW1w',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large' as const,
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: 'https://keerthigowda.com',
   },
 }
 
@@ -45,8 +76,6 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="icon" type="image/png" href="/icons/favicon-96x96.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/icons/apple-icon-precomposed.png" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
       </head>
       <body className={ibmPlexMono.className}>

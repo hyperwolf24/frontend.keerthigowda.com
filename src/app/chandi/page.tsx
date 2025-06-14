@@ -13,7 +13,7 @@ export default function Chandi() {
         {/*
         <div className="relative w-full h-[32rem] rounded-lg overflow-hidden mb-8">
           <Image
-            src="/images/chandi.jpg"
+            src="/images/chandi.webp"
             alt="Project Chandi"
             fill
             className="object-cover"

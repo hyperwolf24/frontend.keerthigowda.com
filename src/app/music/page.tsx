@@ -10,7 +10,7 @@ export default function Music() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
         <div className="relative w-full h-[32rem] rounded-lg overflow-hidden">
           <Image
-            src="/images/mridangam1.jpeg"
+            src="/images/mridangam1.webp"
             alt="Keerthi with Mridangam"
             fill
             className="object-cover"
@@ -47,7 +47,7 @@ export default function Music() {
         <div className={styles.musicCard}>
           <h3 className="text-2xl font-semibold mb-4 text-[#018c6d]">Mridangam</h3>
           <p className="text-[#ccd6f6]">
-            I started learning Mridangam in May 2025, excited to explore its rhythms and deepen my connection with the instrument.
+            I started learning Mridangam in June 2025, excited to explore its rhythms and deepen my connection with the instrument.
           </p>
         </div>
 
@@ -61,7 +61,7 @@ export default function Music() {
         <div className={styles.musicCard}>
           <h3 className="text-2xl font-semibold mb-4 text-[#018c6d]">Yakshagana</h3>
           <p className="text-[#ccd6f6]">
-            Recently started learning Yakshagana (Tenku Tittu Style).
+            Recently started learning Yakshagana (Tenku Tittu).
           </p>
         </div>
       </div>

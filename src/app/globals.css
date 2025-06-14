@@ -85,7 +85,7 @@ html {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('/images/farm.jpeg');
+  background-image: url('/images/farm.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -96,7 +96,7 @@ html {
   transform: scale(1.1);
 }
 
-.farm-background::before {
+.ground::before {
   content: '';
   position: absolute;
   top: 0;
