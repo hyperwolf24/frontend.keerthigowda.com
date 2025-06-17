@@ -19,7 +19,21 @@
 }
 
 .grid {
-  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 .card {
@@ -48,4 +62,62 @@
 
 .funFact {
   @apply md:col-span-2 lg:col-span-3;
-} 
+}
+
+/* Career Timeline Styles */
+.careerTimeline {
+  @apply relative py-8;
+}
+
+.timelineContainer {
+  @apply relative py-8 flex flex-row overflow-x-auto gap-8 pb-4;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.timelineContainer::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.timelineItem {
+  @apply relative flex-shrink-0;
+  width: 400px;
+}
+
+.timelineContent {
+  @apply relative border border-[#018c6d]/20 shadow-lg h-full;
+}
+
+.timelineTitle {
+  @apply text-[#018c6d] text-xl font-semibold mb-6;
+}
+
+.timelineDate {
+  @apply text-white/70 text-sm mb-6 block;
+}
+
+.timelineCompany {
+  @apply text-white font-medium mb-4;
+}
+
+.timelineList {
+  @apply text-white/90 space-y-2;
+}
+
+.timelineListItem {
+  @apply flex items-start;
+}
+
+.timelineBullet {
+  @apply text-[#018c6d] mr-2;
+}
+
+@media (max-width: 768px) {
+  .timelineContainer {
+    @apply flex-col gap-6;
+  }
+
+  .timelineItem {
+    @apply w-full;
+  }
+}

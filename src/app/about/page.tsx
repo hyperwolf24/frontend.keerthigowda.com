@@ -1,4 +1,5 @@
 import { aboutMetadata } from '../metadata'
+import { TimelineList, TimelineItem } from '../components/Timeline'
 
 export const metadata = aboutMetadata
 
@@ -108,6 +109,65 @@ export default function About() {
               DSA interviews are not my cup of tea, I just get things done the production way. My debugging skills have debugging skills.
             </p>
           </div>
+
+          <TimelineList title="Career Journey">
+            <TimelineItem
+              title="Lead Software Developer"
+              dateTime="Oct 2024 - Present"
+              company="ITRANSZ ESOLUTION PRIVATE LIMITED"
+              description={[
+                "Transformed traditional IP camera systems into intelligent AI-based surveillance solutions",
+                "Integrated Hailo AI chip for edge computing and real-time video processing",
+                "Engineered video streaming solution achieving 50-60% bandwidth reduction"
+              ]}
+              icon="code"
+            />
+            <TimelineItem
+              title="Project Solution Engineer"
+              dateTime="Oct 2023 - Sep 2024"
+              company="ITRANSZ ESOLUTION PRIVATE LIMITED"
+              description={[
+                "Developed cross-platform mobile application using Flutter framework",
+                "Built scalable backend APIs using FastAPI for high-performance operations",
+                "Implemented containerized deployment architecture using Kubernetes"
+              ]}
+              icon="laptop-code"
+            />
+            <TimelineItem
+              title="Co-Founder & CTO"
+              dateTime="Apr 2019 - Present"
+              company="FARM2INDIA"
+              description={[
+                "Developed ML-based single-leaf weed detection for real-time feedback",
+                "Working on swarm robotics powered by blockchain for farm management",
+                "Building unified marketplace for agricultural products"
+              ]}
+              icon="seedling"
+            />
+            <TimelineItem
+              title="Data Engineer"
+              dateTime="Sep 2023 - Oct 2023"
+              company="KredX"
+              description={[
+                "Automated data collection for corporate listing database",
+                "Managed corporate data and documents with Supabase",
+                "Built LLM-powered chat tool for IndiaInc"
+              ]}
+              icon="database"
+            />
+            <TimelineItem
+              title="Automation Engineer"
+              dateTime="Mar 2023 - Aug 2023"
+              company="Crestron Electronics"
+              description={[
+                "Designed and implemented system-wide automation test plans",
+                "Developed API test automation for Crestron Devices",
+                "Created Jenkins pipelines for automated regression testing"
+              ]}
+              icon="robot"
+              lastItem
+            />
+          </TimelineList>
         </div>
       </section>
     </>
