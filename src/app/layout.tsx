@@ -94,7 +94,7 @@ export default function RootLayout({
             <main className="flex-grow">
               {children}
             </main>
-            <footer className="w-full py-4 text-[#8892b0]">
+            <footer className="w-full py-4 text-[#FFFFFF]">
               <div className="container mx-auto px-4">
                 <p className="text-center">
                   &copy; {new Date().getFullYear()} Keerthi Gowda. All rights reserved.
