@@ -49,10 +49,10 @@ export default function AboutClient() {
                   <span className="skill-icon mr-2">💾</span>
                   Database management with Postgres
                 </li>
-                <li className="flex items-center text-[#ccd6f6]">
+                {/* <li className="flex items-center text-[#ccd6f6]">
                   <span className="skill-icon mr-2">🤖</span>
                   Machine Learning with Tensorflow
-                </li>
+                </li> */}
               </ul>
             </div>
 
@@ -63,8 +63,8 @@ export default function AboutClient() {
               </h3>
               <ul className="skills-list space-y-3">
                 <li className="flex items-center text-[#ccd6f6]">
-                  <span className="skill-icon mr-2">🅰️</span>
-                  Angular for advanced frontend development
+                  <span className="skill-icon mr-2">⚛️</span>
+                  NextJS for advanced frontend development
                 </li>
                 <li className="flex items-center text-[#ccd6f6]">
                   <span className="skill-icon mr-2">⚡</span>

@@ -19,7 +19,7 @@ export default function Music() {
         </div>
         <div className="relative w-full h-[32rem] rounded-lg overflow-hidden">
           <Image
-            src="/images/concert.jpeg"
+            src="/images/concert.webp"
             alt="Chennai Concert. Trichy Sankaran Playing Mridangam"
             fill
             className="object-cover"

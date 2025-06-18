@@ -70,9 +70,10 @@
 }
 
 .timelineContainer {
-  @apply relative py-8 flex flex-row overflow-x-auto gap-8 pb-4;
+  @apply relative py-8 flex flex-row overflow-x-auto gap-8 pb-4 px-16;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
+  scroll-behavior: smooth;
 }
 
 .timelineContainer::-webkit-scrollbar {

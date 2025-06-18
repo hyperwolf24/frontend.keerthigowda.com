@@ -46,7 +46,7 @@ public/
 │   ├── Profile images (keerthi-gowda*.webp)
 │   ├── Farm produce images (arecanut.webp, cardamom.webp, etc.)
 │   ├── Music-related images (mridangam*.webp)
-│   ├── Event images (concert.jpeg, wedding-candid.webp)
+│   ├── Event images (concert.webp, wedding-candid.webp)
 │   └── Other content images (background.webp, shiva.webp, etc.)
 ├── icons/
 │   ├── Favicon files (favicon.ico, favicon-*.png)

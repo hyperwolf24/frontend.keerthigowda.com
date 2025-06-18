@@ -1,6 +1,6 @@
 'use client'
 
-import { ReactNode } from 'react'
+import { ReactNode, useRef } from 'react'
 import styles from '../about/about.module.css'
 
 interface TimelineItemProps {
@@ -41,6 +41,20 @@ export function TimelineItem({ title, dateTime, company, description, icon }: Ti
 }
 
 export function TimelineList({ children, title }: TimelineListProps) {
+  const timelineRef = useRef<HTMLDivElement>(null);
+
+  const scrollLeft = () => {
+    if (timelineRef.current) {
+      timelineRef.current.scrollBy({ left: -400, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = () => {
+    if (timelineRef.current) {
+      timelineRef.current.scrollBy({ left: 400, behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className={styles.careerTimeline}>
       {title && (
@@ -49,8 +63,24 @@ export function TimelineList({ children, title }: TimelineListProps) {
           {title}
         </h3>
       )}
-      <div className={styles.timelineContainer}>
-        {children}
+      <div className="relative">
+        <button
+          onClick={scrollLeft}
+          className="absolute -left-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-[#018c6d] text-white rounded-full hover:bg-[#016b54] transition-colors flex items-center justify-center shadow-lg"
+          aria-label="Scroll left"
+        >
+          <i className="fas fa-chevron-left"></i>
+        </button>
+        <div ref={timelineRef} className={styles.timelineContainer}>
+          {children}
+        </div>
+        <button
+          onClick={scrollRight}
+          className="absolute -right-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-[#018c6d] text-white rounded-full hover:bg-[#016b54] transition-colors flex items-center justify-center shadow-lg"
+          aria-label="Scroll right"
+        >
+          <i className="fas fa-chevron-right"></i>
+        </button>
       </div>
     </div>
   )
