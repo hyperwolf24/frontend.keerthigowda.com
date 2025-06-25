@@ -58,7 +58,6 @@ function parseRSSFeed(xmlText: string): BlogPost[] {
     const titleRegex = /<title><!\[CDATA\[(.*?)\]\]><\/title>/;
     const linkRegex = /<link>(.*?)<\/link>/;
     const pubDateRegex = /<pubDate>(.*?)<\/pubDate>/;
-    const categoryRegex = /<category><!\[CDATA\[(.*?)\]\]><\/category>/g;
     const contentRegex = /<content:encoded><!\[CDATA\[(.*?)\]\]><\/content:encoded>/;
     
     const posts: BlogPost[] = [];
@@ -126,7 +125,7 @@ function parseRSSFeed(xmlText: string): BlogPost[] {
     }
     
     return posts;
-  } catch (error) {
+  } catch {
     return fallbackBlogPosts;
   }
 }
@@ -168,13 +167,13 @@ export async function GET() {
         error: 'No posts found in RSS'
       });
     }
-  } catch (error) {
+  } catch {
     return NextResponse.json({
       success: true,
       source: 'fallback',
       posts: fallbackBlogPosts,
       count: fallbackBlogPosts.length,
-      error: error instanceof Error ? error.message : 'Unknown error'
+      error: 'Unknown error'
     });
   }
 } 

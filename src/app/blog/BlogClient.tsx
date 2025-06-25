@@ -9,28 +9,16 @@ export default function BlogClient() {
   const [currentPage, setCurrentPage] = useState(1);
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>(fallbackPosts);
   const [isLoading, setIsLoading] = useState(true);
-  const [dataSource, setDataSource] = useState<'rss' | 'fallback' | 'loading'>('loading');
-  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const loadBlogPosts = async () => {
       setIsLoading(true);
-      setDataSource('loading');
-      setError(null);
       
       try {
         const result = await fetchBlogPosts();
-        
         setBlogPosts(result.posts);
-        setDataSource(result.source);
-        
-        if (result.error) {
-          setError(result.error);
-        }
-      } catch (error) {
+      } catch {
         setBlogPosts(fallbackPosts);
-        setDataSource('fallback');
-        setError(error instanceof Error ? error.message : 'Unknown error');
       } finally {
         setIsLoading(false);
       }
@@ -70,7 +58,7 @@ export default function BlogClient() {
           ) : (
             <>
               <div className="blog-grid space-y-6 mb-8">
-                {currentPosts.map((post, index) => (
+                {currentPosts.map((post) => (
                   <article key={post.id} className="blog-card transition-transform hover:-translate-y-1">
                     <div className="blog-card-content">
                       <div className="blog-meta text-sm text-[#8892b0] mb-3">
