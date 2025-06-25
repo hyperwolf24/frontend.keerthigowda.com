@@ -151,4 +151,27 @@ export const contactMetadata: Metadata = {
     description: 'Get in touch with Keerthi Gowda through email, LinkedIn, or GitHub.',
     images: ['/images/keerthi-profile.webp'],
   },
+}
+
+export const blogMetadata: Metadata = {
+  ...baseMetadata,
+  title: 'Keerthi Gowda - Blog',
+  description: 'Read Keerthi Gowda\'s thoughts on technology, agriculture, and life. Explore articles on software engineering, farming, and personal insights.',
+  keywords: 'Keerthi Gowda, Blog, Technology, Agriculture, Software Engineering, Medium',
+  alternates: {
+    canonical: 'https://keerthigowda.com/blog',
+  },
+  openGraph: {
+    ...baseMetadata.openGraph,
+    title: 'Keerthi Gowda - Blog',
+    description: 'Read Keerthi Gowda\'s thoughts on technology, agriculture, and life.',
+    images: ['/images/keerthi-gowda.webp'],
+    url: 'https://keerthigowda.com/blog',
+  },
+  twitter: {
+    ...baseMetadata.twitter,
+    title: 'Keerthi Gowda - Blog',
+    description: 'Read Keerthi Gowda\'s thoughts on technology, agriculture, and life.',
+    images: ['/images/keerthi-gowda.webp'],
+  },
 } 

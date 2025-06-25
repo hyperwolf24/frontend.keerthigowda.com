@@ -31,6 +31,9 @@ export default function Navigation() {
         <Link href="/farm" onClick={handleLinkClick}>
           Farm
         </Link>
+        <Link href="/blog" onClick={handleLinkClick}>
+          Blog
+        </Link>
         <div 
           className="nav-dropdown"
           onMouseEnter={() => window.innerWidth > 768 && setIsProjectsOpen(true)}
