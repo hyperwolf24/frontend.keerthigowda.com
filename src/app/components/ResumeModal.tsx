@@ -25,7 +25,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
           <h2 className="text-[#018c6d] text-xl font-semibold">Resume</h2>
           <div className="flex gap-4">
             <a
-              href="/KEERTHI GOWDA RESUME_1.pdf"
+              href="/KEERTHI GOWDA RESUME.pdf"
               download
               className="px-4 py-2 bg-[#018c6d] text-white rounded hover:bg-[#016b54] transition-colors"
             >
@@ -41,7 +41,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
         </div>
         <div className="h-[calc(85vh-8rem)] bg-white rounded overflow-hidden">
           <embed
-            src="/KEERTHI GOWDA RESUME_1.pdf#toolbar=0&navpanes=0"
+            src="/KEERTHI GOWDA RESUME.pdf#toolbar=0&navpanes=0"
             type="application/pdf"
             className="w-full h-full"
           />

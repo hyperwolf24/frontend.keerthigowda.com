@@ -41,7 +41,7 @@ const nextConfig = {
         ],
       },
       {
-        source: '/KEERTHI GOWDA RESUME_1.pdf',
+        source: '/KEERTHI GOWDA RESUME.pdf',
         headers: [
           {
             key: 'Content-Type',

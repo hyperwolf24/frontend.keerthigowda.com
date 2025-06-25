@@ -1,5 +1,5 @@
 # Step 1: Build the app
-FROM node:18-alpine AS builder
+FROM node:22.16.0-alpine AS builder
 
 WORKDIR /app
 COPY package*.json ./
@@ -8,7 +8,7 @@ COPY . .
 RUN npm run build
 
 # Step 2: Run the app with minimal image
-FROM node:18-alpine
+FROM node:22.16.0-alpine
 
 WORKDIR /app
 COPY --from=builder /app/package*.json ./
