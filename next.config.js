@@ -41,7 +41,7 @@ const nextConfig = {
         ],
       },
       {
-        source: '/(.*\\.(png|jpg|jpeg|gif|webp|ico|svg|woff|woff2|ttf|eot))',
+        source: '/:path*.png',
         headers: [
           {
             key: 'Cache-Control',
@@ -50,7 +50,97 @@ const nextConfig = {
         ],
       },
       {
-        source: '/(.*\\.(js|css|ts|tsx|jsx))',
+        source: '/:path*.jpg',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/:path*.jpeg',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/:path*.gif',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/:path*.webp',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/:path*.ico',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/:path*.svg',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/:path*.woff',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/:path*.woff2',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/:path*.ttf',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/:path*.eot',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/:path*.js',
         headers: [
           {
             key: 'Cache-Control',
@@ -59,7 +149,52 @@ const nextConfig = {
         ],
       },
       {
-        source: '/(.*\\.(html|htm))',
+        source: '/:path*.css',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=300, must-revalidate',
+          },
+        ],
+      },
+      {
+        source: '/:path*.ts',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=300, must-revalidate',
+          },
+        ],
+      },
+      {
+        source: '/:path*.tsx',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=300, must-revalidate',
+          },
+        ],
+      },
+      {
+        source: '/:path*.jsx',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=300, must-revalidate',
+          },
+        ],
+      },
+      {
+        source: '/:path*.html',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=300, must-revalidate',
+          },
+        ],
+      },
+      {
+        source: '/:path*.htm',
         headers: [
           {
             key: 'Cache-Control',
