@@ -36,7 +36,34 @@ const nextConfig = {
           },
           {
             key: 'Cache-Control',
+            value: 'public, max-age=300, must-revalidate',
+          },
+        ],
+      },
+      {
+        source: '/(.*\\.(png|jpg|jpeg|gif|webp|ico|svg|woff|woff2|ttf|eot))',
+        headers: [
+          {
+            key: 'Cache-Control',
             value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/(.*\\.(js|css|ts|tsx|jsx))',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=300, must-revalidate',
+          },
+        ],
+      },
+      {
+        source: '/(.*\\.(html|htm))',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=300, must-revalidate',
           },
         ],
       },
