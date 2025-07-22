@@ -59,7 +59,7 @@ export default function AnimatedName({
           from: '-1turn',
           delay: 0
         },
-        delay: (_: any, i: number) => i * 50, // Function based value
+        delay: (_: unknown, i: number) => i * 50, // Function based value
         ease: 'inOutCirc',
         loop: false // Remove looping
       });
@@ -68,7 +68,7 @@ export default function AnimatedName({
     }
     
     prevNameRef.current = name;
-  }, [name])
+  }, [name, letters])
 
   return (
     <div 
