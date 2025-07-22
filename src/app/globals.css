@@ -496,3 +496,17 @@ html {
   }
 }
 
+/* Animated Name Grid Layout */
+.large.grid.centered.square-grid {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.large.grid.centered.square-grid span {
+  display: inline-block;
+  margin: 0 2px;
+  position: relative;
+}
+

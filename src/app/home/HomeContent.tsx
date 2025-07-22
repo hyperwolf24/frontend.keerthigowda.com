@@ -2,16 +2,49 @@
 
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
+import AnimatedName from '../components/AnimatedName'
 
 const names = [
-  { lang: 'kannada', text: 'ಕೀರ್ತಿ ಗೌಡ' },
-  { lang: 'english', text: 'Keerthi Gowda' },
-  { lang: 'malayalam', text: 'കീർത്തി ഗൗഡ' },
-  { lang: 'tamil', text: 'கீர்த்தி கவுடா' },
-  { lang: 'sanskrit', text: 'कीर्तिः गौडा' },
-  { lang: 'telugu', text: 'కీర్తి గౌడ' },
-  { lang: 'japanese', text: 'ケエルティ ゴウダ' },
-  { lang: 'russian', text: 'Кирти Гоуда' }
+  { 
+    lang: 'kannada', 
+    text: 'ಕೀರ್ತಿ ಗೌಡ',
+    letters: ['ಕೀ', 'ರ್ತಿ', ' ', 'ಗೌ', 'ಡ']
+  },
+  { 
+    lang: 'english', 
+    text: 'Keerthi Gowda',
+    letters: ['K', 'e', 'e', 'r', 't', 'h', 'i', ' ', 'G', 'o', 'w', 'd', 'a']
+  },
+  { 
+    lang: 'malayalam', 
+    text: 'കീർത്തി ഗൗഡ',
+    letters: ['കീ', 'ർ', 'ത്തി', ' ', 'ഗൗ', 'ഡ']
+  },
+  { 
+    lang: 'tamil', 
+    text: 'கீர்த்தி கவுடா',
+    letters: ['கீ', 'ர்', 'த்', 'தி', ' ', 'க', 'வு', 'டா']
+  },
+  { 
+    lang: 'sanskrit', 
+    text: 'कीर्तिः गौडा',
+    letters: ['की', 'र्तिः', ' ', 'गौ', 'डा']
+  },
+  { 
+    lang: 'telugu', 
+    text: 'కీర్తి గౌడ',
+    letters: ['కీ', 'ర్తి', ' ', 'గౌ', 'డ']
+  },
+  { 
+    lang: 'japanese', 
+    text: 'ケエルティ ゴウダ',
+    letters: ['ケ', 'エ', 'ル', 'テ', 'ィ', ' ', 'ゴ', 'ウ', 'ダ']
+  },
+  { 
+    lang: 'russian', 
+    text: 'Кирти Гоуда',
+    letters: ['К', 'и', 'р', 'т', 'и', ' ', 'Г', 'о', 'у', 'д', 'а']
+  }
 ]
 
 export default function HomeContent() {
@@ -28,14 +61,18 @@ export default function HomeContent() {
   }, [])
 
   const handleNameClick = () => {
+    if (isTransitioning) return
+    
     setIsTransitioning(true)
     const currentIndex = names.findIndex(name => name.lang === currentName.lang)
     const nextIndex = (currentIndex + 1) % names.length
     
     setTimeout(() => {
       setCurrentName(names[nextIndex])
-      setIsTransitioning(false)
-    }, 300)
+      setTimeout(() => {
+        setIsTransitioning(false)
+      }, 100)
+    }, 400)
   }
 
   return (
@@ -52,13 +89,13 @@ export default function HomeContent() {
         </div>
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-[#ccd6f6]">
           Hi, I&apos;m{' '}
-          <span
-            className="text-[#64ffda] cursor-pointer transition-opacity duration-300"
-            style={{ opacity: isTransitioning ? 0 : 1 }}
+          <AnimatedName
+            name={currentName.text}
+            letters={currentName.letters}
             onClick={handleNameClick}
-          >
-            {currentName.text}
-          </span>
+            isTransitioning={isTransitioning}
+            className="text-[#64ffda]"
+          />
         </h1>
         <p className="text-xl text-[#8892b0]">Full Stack Engineer | Farmer by Weekend</p>
       </div>
