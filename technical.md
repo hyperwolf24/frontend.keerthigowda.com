@@ -84,6 +84,7 @@ public/
 - Custom floating bubbles background effect
 - Consistent layout across all pages
 - Footer with copyright information
+- **Current State**: Projects dropdown menu is temporarily disabled/hidden and will be enabled later when required
 
 ### Security Features
 - Content Security Policy (CSP) implementation
@@ -124,6 +125,8 @@ public/
    - Includes project details and service offerings
    - Responsive image gallery with wedding candid photography
    - Interactive UI elements with hover effects
+
+**Note**: The Projects dropdown menu in the navigation is currently hidden/disabled and will be enabled later when required. This includes the Chandi and Elements pages which are accessible via the Projects dropdown when enabled.
 
 ### Components
 1. **Navigation**

@@ -5,15 +5,18 @@ import Link from 'next/link'
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isProjectsOpen, setIsProjectsOpen] = useState(false)
+  // Temporarily disabled - will be enabled later when required
+  // const [isProjectsOpen, setIsProjectsOpen] = useState(false)
 
-  const handleProjectsToggle = () => {
-    setIsProjectsOpen(!isProjectsOpen)
-  }
+  // Temporarily disabled - will be enabled later when required
+  // const handleProjectsToggle = () => {
+  //   setIsProjectsOpen(!isProjectsOpen)
+  // }
 
   const handleLinkClick = () => {
     setIsMenuOpen(false)
-    setIsProjectsOpen(false)
+    // Temporarily disabled - will be enabled later when required
+    // setIsProjectsOpen(false)
   }
 
   return (
@@ -34,7 +37,8 @@ export default function Navigation() {
         <Link href="/blog" onClick={handleLinkClick}>
           Blog
         </Link>
-        <div 
+        {/* Temporarily disabled - will be enabled later when required */}
+        {/* <div 
           className="nav-dropdown"
           onMouseEnter={() => window.innerWidth > 768 && setIsProjectsOpen(true)}
           onMouseLeave={() => window.innerWidth > 768 && setIsProjectsOpen(false)}
@@ -49,7 +53,7 @@ export default function Navigation() {
             <Link href="/chandi" onClick={handleLinkClick}>Chandi</Link>
             <Link href="/elements" onClick={handleLinkClick}>Elements</Link>
           </div>
-        </div>
+        </div> */}
         <Link href="/about" onClick={handleLinkClick}>
           About
         </Link>
