@@ -80,7 +80,7 @@ export default function HomeContent() {
       <div className="relative z-10 text-center">
         <div className="relative w-64 h-64 mx-auto mb-8 rounded-full overflow-hidden">
           <Image
-            src="/images/keerthi-gowda3.webp"
+            src="/images/keerthi-gowda.webp"
             alt="Keerthi Gowda"
             fill
             className="object-cover"
