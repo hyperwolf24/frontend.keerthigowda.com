@@ -40,28 +40,28 @@ export default function Music() {
       <h1 className="text-4xl font-bold mb-8 text-center text-white">My Musical Journey</h1>
       
       <p className="mb-8 text-[#ccd6f6] leading-relaxed relative z-10 text-center max-w-2xl mx-auto">
-        My journey with music began during my school days, but I developed a significant interest in Carnatic music in late 2024.
+        My musical journey began during school days, with a growing interest in Carnatic music that continues to evolve.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 pt-12 max-w-4xl mx-auto">
         <div className={styles.musicCard}>
           <h3 className="text-2xl font-semibold mb-4 text-[#018c6d]">Mridangam</h3>
           <p className="text-[#ccd6f6]">
-            I started learning Mridangam in June 2025, excited to explore its rhythms and deepen my connection with the instrument.
+            Learning the traditional South Indian percussion instrument, exploring its complex rhythms and techniques.
           </p>
         </div>
 
         <div className={styles.musicCard}>
           <h3 className="text-2xl font-semibold mb-4 text-[#018c6d]">Harmonium</h3>
           <p className="text-[#ccd6f6]">
-            Recently started learning Carnatic harmonium.
+            Exploring Carnatic harmonium to understand the melodic aspects of classical music.
           </p>
         </div>
 
         <div className={styles.musicCard}>
           <h3 className="text-2xl font-semibold mb-4 text-[#018c6d]">Yakshagana</h3>
           <p className="text-[#ccd6f6]">
-            Recently started learning Yakshagana (Tenku Tittu).
+            Learning Yakshagana (Tenku Tittu), the traditional Karnataka folk theater art form.
           </p>
         </div>
       </div>

@@ -35,11 +35,6 @@ export async function GET() {
       lastmod: today,
       title: 'Keerthi Gowda'
     },
-    {
-      url: `${baseUrl}/elements`,
-      lastmod: today,
-      title: 'Keerthi Gowda'
-    }
   ]
 
   return NextResponse.json(pages, {

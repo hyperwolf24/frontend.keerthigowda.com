@@ -51,7 +51,6 @@ export default function Navigation() {
           </span>
           <div className={`nav-dropdown-menu ${isProjectsOpen ? 'active' : ''}`}>
             <Link href="/chandi" onClick={handleLinkClick}>Chandi</Link>
-            <Link href="/elements" onClick={handleLinkClick}>Elements</Link>
           </div>
         </div> */}
         <Link href="/about" onClick={handleLinkClick}>

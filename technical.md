@@ -25,7 +25,6 @@ src/
 │   ├── farm/
 │   ├── music/
 │   ├── chandi/
-│   ├── elements/
 │   ├── utils/
 │   ├── .well-known/
 │   ├── globals.css
@@ -119,14 +118,8 @@ public/
 6. **Chandi** (`/chandi`)
    - Chandi-related content and information
 
-7. **Elements** (`/elements`)
-   - Wedding photography project showcase
-   - Features pay-per-photo candid photography service
-   - Includes project details and service offerings
-   - Responsive image gallery with wedding candid photography
-   - Interactive UI elements with hover effects
 
-**Note**: The Projects dropdown menu in the navigation is currently hidden/disabled and will be enabled later when required. This includes the Chandi and Elements pages which are accessible via the Projects dropdown when enabled.
+**Note**: The Projects dropdown menu in the navigation is currently hidden/disabled and will be enabled later when required. This includes the Chandi page which is accessible via the Projects dropdown when enabled.
 
 ### Components
 1. **Navigation**

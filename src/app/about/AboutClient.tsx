@@ -97,7 +97,7 @@ export default function AboutClient() {
                 </li>
                 <li className="flex items-center text-[#ccd6f6]">
                   <span className="skill-icon mr-2">🇮🇳</span>
-                  Malayalam & Telugu – Can understand, looking for someone to help me improve
+                  Malayalam & Telugu – Conversational understanding, actively improving proficiency
                 </li>
               </ul>
             </div>
@@ -109,7 +109,7 @@ export default function AboutClient() {
               Fun Fact
             </h3>
             <p className="text-[#ccd6f6] leading-relaxed">
-              DSA interviews are not my cup of tea, I just get things done the production way. My debugging skills have debugging skills.
+             DSA interviews are not my cup of tea, I just get things done the production way.
             </p>
           </div>
 

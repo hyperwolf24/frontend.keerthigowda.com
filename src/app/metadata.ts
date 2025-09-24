@@ -41,22 +41,22 @@ const baseMetadata = {
 export const homeMetadata: Metadata = {
   ...baseMetadata,
   title: 'Keerthi Gowda - Software Engineer',
-  description: 'Welcome to the official website of Keerthi Gowda - Software Engineer, Farmer, and more. Explore music, farming and learn about Keerthi\'s work.',
-  keywords: 'Keerthi Gowda, Software Engineer, Farmer, official website, music, farming',
+  description: 'Software Engineer and Agricultural Entrepreneur. Professional portfolio showcasing technical expertise and agricultural ventures.',
+  keywords: 'Software Engineer, Agricultural Entrepreneur, Technology, Agriculture',
   alternates: {
     canonical: 'https://keerthigowda.com',
   },
   openGraph: {
     ...baseMetadata.openGraph,
     title: 'Keerthi Gowda - Software Engineer',
-    description: 'Welcome to the official website of Keerthi Gowda - Software Engineer, Farmer, and more.',
+    description: 'Software Engineer and Agricultural Entrepreneur. Professional portfolio showcasing technical expertise and agricultural ventures.',
     images: ['/images/keerthi-profile.webp'],
     url: 'https://keerthigowda.com',
   },
   twitter: {
     ...baseMetadata.twitter,
     title: 'Keerthi Gowda - Software Engineer',
-    description: 'Welcome to the official website of Keerthi Gowda - Software Engineer, Farmer, and more.',
+    description: 'Software Engineer and Agricultural Entrepreneur. Professional portfolio showcasing technical expertise and agricultural ventures.',
     images: ['/images/keerthi-profile.webp'],
   },
 }
@@ -64,22 +64,22 @@ export const homeMetadata: Metadata = {
 export const musicMetadata: Metadata = {
   ...baseMetadata,
   title: 'Keerthi Gowda - Music',
-  description: 'Explore Keerthi Gowda\'s musical journey, including Mridangam, Harmonium, and Yakshagana. Discover performances, recordings, and musical achievements.',
-  keywords: 'Keerthi Gowda, Music, Mridangam, Harmonium, Yakshagana, Indian Classical Music',
+  description: 'Musical pursuits in Carnatic traditions including Mridangam, Harmonium, and Yakshagana.',
+  keywords: 'Music, Mridangam, Harmonium, Yakshagana, Indian Classical Music, Carnatic',
   alternates: {
     canonical: 'https://keerthigowda.com/music',
   },
   openGraph: {
     ...baseMetadata.openGraph,
     title: 'Keerthi Gowda - Music',
-    description: 'Explore Keerthi Gowda\'s musical journey, including Mridangam, Harmonium, and Yakshagana.',
+    description: 'Musical pursuits in Carnatic traditions including Mridangam, Harmonium, and Yakshagana.',
     images: ['/images/mridangam1.webp'],
     url: 'https://keerthigowda.com/music',
   },
   twitter: {
     ...baseMetadata.twitter,
     title: 'Keerthi Gowda - Music',
-    description: 'Explore Keerthi Gowda\'s musical journey, including Mridangam, Harmonium, and Yakshagana.',
+    description: 'Musical pursuits in Carnatic traditions including Mridangam, Harmonium, and Yakshagana.',
     images: ['/images/mridangam1.webp'],
   },
 }
@@ -87,22 +87,22 @@ export const musicMetadata: Metadata = {
 export const farmMetadata: Metadata = {
   ...baseMetadata,
   title: 'Keerthi Gowda - Farm',
-  description: 'Explore the farm of Keerthi Gowda, featuring various crops including coconut, arecanut, cardamom, and more. Learn about sustainable farming practices and organic cultivation.',
-  keywords: 'Keerthi Gowda, Farm, Agriculture, Organic Farming, Coconut, Arecanut, Cardamom',
+  description: 'Sustainable agricultural practices with diverse crop cultivation and livestock management.',
+  keywords: 'Agriculture, Sustainable Farming, Crop Cultivation, Livestock Management, Organic Farming',
   alternates: {
     canonical: 'https://keerthigowda.com/farm',
   },
   openGraph: {
     ...baseMetadata.openGraph,
     title: 'Keerthi Gowda - Farm',
-    description: 'Explore the farm of Keerthi Gowda, featuring various crops including coconut, arecanut, cardamom, and more.',
+    description: 'Sustainable agricultural practices with diverse crop cultivation and livestock management.',
     images: ['/images/farm.webp'],
     url: 'https://keerthigowda.com/farm',
   },
   twitter: {
     ...baseMetadata.twitter,
     title: 'Keerthi Gowda - Farm',
-    description: 'Explore the farm of Keerthi Gowda, featuring various crops including coconut, arecanut, cardamom, and more.',
+    description: 'Sustainable agricultural practices with diverse crop cultivation and livestock management.',
     images: ['/images/farm.webp'],
   },
 }
@@ -110,22 +110,22 @@ export const farmMetadata: Metadata = {
 export const aboutMetadata: Metadata = {
   ...baseMetadata,
   title: 'Keerthi Gowda - About',
-  description: 'Learn more about Keerthi Gowda - Full Stack Engineer with expertise in Python, Flutter, and more. Discover his journey, skills, and professional experience.',
-  keywords: 'Keerthi Gowda, Software Engineer, Full Stack, Python, Flutter, Web Development',
+  description: 'Full Stack Engineer with expertise in modern web technologies, mobile development, and agricultural technology.',
+  keywords: 'Software Engineer, Full Stack, Python, Flutter, Web Development, Mobile Development',
   alternates: {
     canonical: 'https://keerthigowda.com/about',
   },
   openGraph: {
     ...baseMetadata.openGraph,
     title: 'Keerthi Gowda - About',
-    description: 'Learn more about Keerthi Gowda - Full Stack Engineer with expertise in Python, Flutter, and more.',
+    description: 'Full Stack Engineer with expertise in modern web technologies, mobile development, and agricultural technology.',
     images: ['/images/keerthi-gowda.webp'],
     url: 'https://keerthigowda.com/about',
   },
   twitter: {
     ...baseMetadata.twitter,
     title: 'Keerthi Gowda - About',
-    description: 'Learn more about Keerthi Gowda - Full Stack Engineer with expertise in Python, Flutter, and more.',
+    description: 'Full Stack Engineer with expertise in modern web technologies, mobile development, and agricultural technology.',
     images: ['/images/keerthi-gowda.webp'],
   },
 }
@@ -133,22 +133,22 @@ export const aboutMetadata: Metadata = {
 export const contactMetadata: Metadata = {
   ...baseMetadata,
   title: 'Keerthi Gowda - Contact',
-  description: 'Get in touch with Keerthi Gowda through email, LinkedIn, or GitHub. Connect for professional opportunities, collaborations, or inquiries.',
-  keywords: 'Keerthi Gowda, Contact, Email, LinkedIn, GitHub, Professional Network',
+  description: 'Professional contact information for collaborations and inquiries.',
+  keywords: 'Contact, Email, LinkedIn, GitHub, Professional Network, Collaboration',
   alternates: {
     canonical: 'https://keerthigowda.com/contact',
   },
   openGraph: {
     ...baseMetadata.openGraph,
     title: 'Keerthi Gowda - Contact',
-    description: 'Get in touch with Keerthi Gowda through email, LinkedIn, or GitHub.',
+    description: 'Professional contact information for collaborations and inquiries.',
     images: ['/images/keerthi-profile.webp'],
     url: 'https://keerthigowda.com/contact',
   },
   twitter: {
     ...baseMetadata.twitter,
     title: 'Keerthi Gowda - Contact',
-    description: 'Get in touch with Keerthi Gowda through email, LinkedIn, or GitHub.',
+    description: 'Professional contact information for collaborations and inquiries.',
     images: ['/images/keerthi-profile.webp'],
   },
 }
@@ -156,22 +156,22 @@ export const contactMetadata: Metadata = {
 export const blogMetadata: Metadata = {
   ...baseMetadata,
   title: 'Keerthi Gowda - Blog',
-  description: 'Read Keerthi Gowda\'s thoughts on technology, agriculture, and life. Explore articles on software engineering, farming, and personal insights.',
-  keywords: 'Keerthi Gowda, Blog, Technology, Agriculture, Software Engineering, Medium',
+  description: 'Technical articles and insights on software engineering, agriculture, and technology.',
+  keywords: 'Blog, Technology, Agriculture, Software Engineering, Technical Articles',
   alternates: {
     canonical: 'https://keerthigowda.com/blog',
   },
   openGraph: {
     ...baseMetadata.openGraph,
     title: 'Keerthi Gowda - Blog',
-    description: 'Read Keerthi Gowda\'s thoughts on technology, agriculture, and life.',
+    description: 'Technical articles and insights on software engineering, agriculture, and technology.',
     images: ['/images/keerthi-gowda.webp'],
     url: 'https://keerthigowda.com/blog',
   },
   twitter: {
     ...baseMetadata.twitter,
     title: 'Keerthi Gowda - Blog',
-    description: 'Read Keerthi Gowda\'s thoughts on technology, agriculture, and life.',
+    description: 'Technical articles and insights on software engineering, agriculture, and technology.',
     images: ['/images/keerthi-gowda.webp'],
   },
 } 
