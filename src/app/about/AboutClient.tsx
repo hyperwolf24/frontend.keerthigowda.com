@@ -1,11 +1,8 @@
 'use client';
 
-import { useState } from 'react';
 import { TimelineList, TimelineItem } from '../components/Timeline';
-import ResumeModal from '../components/ResumeModal';
 
 export default function AboutClient() {
-  const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
 
   return (
     <>
@@ -172,22 +169,8 @@ export default function AboutClient() {
             />
           </TimelineList>
 
-          <div className="mt-8 flex justify-center">
-            <button
-              onClick={() => setIsResumeModalOpen(true)}
-              className="px-6 py-3 bg-[#018c6d] text-white rounded-lg hover:bg-[#016b54] transition-colors flex items-center gap-2"
-            >
-              <i className="fas fa-file-pdf mr-2"></i>
-              View Resume
-            </button>
-          </div>
         </div>
       </section>
-
-      <ResumeModal
-        isOpen={isResumeModalOpen}
-        onClose={() => setIsResumeModalOpen(false)}
-      />
     </>
   );
 } 

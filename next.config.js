@@ -202,23 +202,6 @@ const nextConfig = {
           },
         ],
       },
-      {
-        source: '/KEERTHI GOWDA RESUME.pdf',
-        headers: [
-          {
-            key: 'Content-Type',
-            value: 'application/pdf',
-          },
-          {
-            key: 'Content-Disposition',
-            value: 'inline',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-        ],
-      },
     ]
   },
   compress: true,
