@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import { musicMetadata } from '../metadata'
-import styles from './music.module.css'
 
 export const metadata = musicMetadata
 
