@@ -97,7 +97,7 @@ export default function RootLayout({
             <footer className="w-full py-4 text-[#FFFFFF]">
               <div className="container mx-auto px-4">
                 <p className="text-center">
-                  &copy; {new Date().getFullYear()} Keerthi Gowda. All rights reserved.
+                  &copy; 2025 Keerthi Gowda. All rights reserved.
                 </p>
               </div>
             </footer>

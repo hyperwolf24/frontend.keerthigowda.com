@@ -78,7 +78,7 @@ export default function HomeContent() {
   return (
     <section className="relative min-h-screen flex items-center justify-center">
       <div className="relative z-10 text-center">
-        <div className="relative w-64 h-64 mx-auto mb-8 rounded-full overflow-hidden">
+        <div className="relative w-72 h-72 md:w-84 md:h-84 mx-auto mb-8 rounded-full overflow-hidden">
           <Image
             src="/images/keerthi-gowda.webp"
             alt="Keerthi Gowda"
