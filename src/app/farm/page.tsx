@@ -13,7 +13,6 @@ const crops = [
   { name: 'Pepper', image: '/images/pepper.webp' },
   { name: 'Coffee', image: '/images/coffee.webp' },
   { name: 'Nutmeg', image: '/images/nutmeg.webp' },
-  { name: 'Sandal', image: '/images/sandal.webp' },
   { name: 'Jackfruit', image: '/images/jackfruit.webp' },
   { name: 'Butter Fruit', image: '/images/butterfruit.webp' },
   { name: 'Chikoo', image: '/images/chikoo.webp' },
@@ -25,7 +24,7 @@ export default function Farm() {
     <section className="relative py-16 px-8 z-4 w-full mt-20">
       <h2 className="text-4xl font-bold mb-6 text-center text-white">The Farm</h2>
       <p className="text-[#ccd6f6] text-lg mb-12 text-center max-w-2xl mx-auto">
-        Sustainable agricultural practices with diverse crop cultivation and livestock management.
+        Just a small farm in my backyard.
       </p>
       <div className="max-w-5xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">

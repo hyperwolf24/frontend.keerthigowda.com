@@ -73,31 +73,6 @@ export default function AboutClient() {
                 </li>
               </ul>
             </div>
-
-            <div className="about-card transition-transform hover:-translate-y-1">
-              <h3 className="text-[#018c6d] text-xl font-semibold mb-4">
-                <i className="fas fa-language mr-2"></i>
-                Languages
-              </h3>
-              <ul className="skills-list space-y-3">
-                <li className="flex items-center text-[#ccd6f6]">
-                  <span className="skill-icon mr-2">🇮🇳</span>
-                  Kannada - Native proficiency
-                </li>
-                <li className="flex items-center text-[#ccd6f6]">
-                  <span className="skill-icon mr-2">🇬🇧</span>
-                  English - Professional proficiency
-                </li>
-                <li className="flex items-center text-[#ccd6f6]">
-                  <span className="skill-icon mr-2">🇮🇳</span>
-                  Tamil & Hindi - Basic conversational skills
-                </li>
-                <li className="flex items-center text-[#ccd6f6]">
-                  <span className="skill-icon mr-2">🇮🇳</span>
-                  Malayalam & Telugu – Conversational understanding, actively improving proficiency
-                </li>
-              </ul>
-            </div>
           </div>
 
           <div className="about-card fun-fact transition-transform hover:-translate-y-1 w-full">
@@ -106,7 +81,7 @@ export default function AboutClient() {
               Fun Fact
             </h3>
             <p className="text-[#ccd6f6] leading-relaxed">
-             DSA interviews are not my cup of tea, I just get things done the production way.
+             DSA and OOPS always feel like oops!!
             </p>
           </div>
 
