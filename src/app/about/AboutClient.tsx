@@ -2,7 +2,64 @@
 
 import { TimelineList, TimelineItem } from '../components/Timeline';
 
+const ABOUT_CARDS = [
+  {
+    icon: 'fa-code',
+    title: 'What I Do',
+    content: (
+      <p className="text-[#ccd6f6] leading-relaxed">
+        Passionate about creating seamless web experiences from front-end to back-end.
+        With expertise in modern dev technologies, I bring ideas to life through clean,
+        efficient, and scalable code.
+      </p>
+    ),
+  },
+  {
+    icon: 'fa-laptop-code',
+    title: 'Technical Skills',
+    content: (
+      <ul className="skills-list space-y-3">
+        <li className="flex items-center text-[#ccd6f6]">
+          <span className="skill-icon mr-2">🚀</span>
+          Python & Flask/FastAPI for robust backend development
+        </li>
+        <li className="flex items-center text-[#ccd6f6]">
+          <span className="skill-icon mr-2">📱</span>
+          Flutter for cross-platform mobile applications
+        </li>
+        <li className="flex items-center text-[#ccd6f6]">
+          <span className="skill-icon mr-2">💾</span>
+          Database management with Postgres
+        </li>
+      </ul>
+    ),
+  },
+  {
+    icon: 'fa-book',
+    title: 'Currently Learning',
+    content: (
+      <ul className="skills-list space-y-3">
+        <li className="flex items-center text-[#ccd6f6]">
+          <span className="skill-icon mr-2">⚛️</span>
+          NextJS for advanced frontend development
+        </li>
+        <li className="flex items-center text-[#ccd6f6]">
+          <span className="skill-icon mr-2">⚡</span>
+          Go for high-performance backend services
+        </li>
+        <li className="flex items-center text-[#ccd6f6]">
+          <span className="skill-icon mr-2">🦀</span>
+          Rust (Rust embed) for system programming
+        </li>
+      </ul>
+    ),
+  },
+];
+
 export default function AboutClient() {
+  const count = ABOUT_CARDS.length;
+  const isOdd = count % 2 === 1;
+  const lastCenteredIndex = isOdd ? count - 1 : -1;
 
   return (
     <>
@@ -15,64 +72,30 @@ export default function AboutClient() {
 
       <section className="about-content py-12">
         <div className="section-content max-w-6xl mx-auto px-4">
-          <div className="about-grid grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            <div className="about-card transition-transform hover:-translate-y-1">
-              <h3 className="text-[#018c6d] text-xl font-semibold mb-4">
-                <i className="fas fa-code mr-2"></i>
-                What I Do
-              </h3>
-              <p className="text-[#ccd6f6] leading-relaxed">
-                Passionate about creating seamless web experiences from front-end to back-end.
-                With expertise in modern dev technologies, I bring ideas to life through clean,
-                efficient, and scalable code.
-              </p>
-            </div>
-
-            <div className="about-card transition-transform hover:-translate-y-1">
-              <h3 className="text-[#018c6d] text-xl font-semibold mb-4">
-                <i className="fas fa-laptop-code mr-2"></i>
-                Technical Skills
-              </h3>
-              <ul className="skills-list space-y-3">
-                <li className="flex items-center text-[#ccd6f6]">
-                  <span className="skill-icon mr-2">🚀</span>
-                  Python & Flask/FastAPI for robust backend development
-                </li>
-                <li className="flex items-center text-[#ccd6f6]">
-                  <span className="skill-icon mr-2">📱</span>
-                  Flutter for cross-platform mobile applications
-                </li>
-                <li className="flex items-center text-[#ccd6f6]">
-                  <span className="skill-icon mr-2">💾</span>
-                  Database management with Postgres
-                </li>
-                {/* <li className="flex items-center text-[#ccd6f6]">
-                  <span className="skill-icon mr-2">🤖</span>
-                  Machine Learning with Tensorflow
-                </li> */}
-              </ul>
-            </div>
-
-            <div className="about-card transition-transform hover:-translate-y-1">
-              <h3 className="text-[#018c6d] text-xl font-semibold mb-4">
-                <i className="fas fa-book mr-2"></i>
-                Currently Learning
-              </h3>
-              <ul className="skills-list space-y-3">
-                <li className="flex items-center text-[#ccd6f6]">
-                  <span className="skill-icon mr-2">⚛️</span>
-                  NextJS for advanced frontend development
-                </li>
-                <li className="flex items-center text-[#ccd6f6]">
-                  <span className="skill-icon mr-2">⚡</span>
-                  Go for high-performance backend services
-                </li>
-                <li className="flex items-center text-[#ccd6f6]">
-                  <span className="skill-icon mr-2">🦀</span>
-                  Rust (Rust embed) for system programming
-                </li>
-              </ul>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            {ABOUT_CARDS.map((card, index) => {
+              const isLastCentered = index === lastCenteredIndex;
+              const cardEl = (
+                <div
+                  key={index}
+                  className={`about-card transition-transform hover:-translate-y-1 ${isLastCentered ? 'w-full md:max-w-[calc(50%-0.75rem)]' : ''}`}
+                >
+                  <h3 className="text-[#018c6d] text-xl font-semibold mb-4">
+                    <i className={`fas ${card.icon} mr-2`}></i>
+                    {card.title}
+                  </h3>
+                  {card.content}
+                </div>
+              );
+              if (isLastCentered) {
+                return (
+                  <div key={index} className="col-span-1 md:col-span-2 flex justify-center">
+                    {cardEl}
+                  </div>
+                );
+              }
+              return cardEl;
+            })}
           </div>
 
           <div className="about-card fun-fact transition-transform hover:-translate-y-1 w-full">

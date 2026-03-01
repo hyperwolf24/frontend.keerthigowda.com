@@ -31,6 +31,9 @@ export default function Navigation() {
         <Link href="/music" onClick={handleLinkClick}>
           Music
         </Link>
+        <Link href="/chandi" onClick={handleLinkClick}>
+          Project Chandi
+        </Link>
         <Link href="/farm" onClick={handleLinkClick}>
           Farm
         </Link>
