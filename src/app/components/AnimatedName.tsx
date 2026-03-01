@@ -1,7 +1,6 @@
 'use client'
 
-import { animate } from 'animejs'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 interface AnimatedNameProps {
   name: string
@@ -11,71 +10,66 @@ interface AnimatedNameProps {
   className?: string
 }
 
-export default function AnimatedName({ 
-  name, 
+const TYPING_DELAY_MS = 90
+const CURSOR_VISIBLE_MS = 400
+
+export default function AnimatedName({
+  name,
   letters,
-  onClick, 
-  isTransitioning = false, 
+  onClick,
+  isTransitioning = false,
   className = ''
 }: AnimatedNameProps) {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const prevNameRef = useRef(name)
-  const animationInitialized = useRef(false)
+  const [typedCount, setTypedCount] = useState(0)
+  const [isTypingComplete, setIsTypingComplete] = useState(false)
+  const timeoutRefs = useRef<ReturnType<typeof setTimeout>[]>([])
+
+  const chars = letters ?? name.split('')
 
   useEffect(() => {
-    if (!containerRef.current) return
-    
-    // Clear previous animation targets
-    const container = containerRef.current
-    container.innerHTML = ''
-    
-    // Create span for each character
-    const characters = letters || name.split('')
-    characters.forEach(char => {
-      const span = document.createElement('span')
-      span.textContent = char === ' ' ? '\u00A0' : char // Use non-breaking space for spaces
-      span.style.display = 'inline-block'
-      span.classList.add('animated-char')
-      container.appendChild(span)
-    })
-    
-    // Only animate when name changes or on initial render
-    const isInitialRender = !animationInitialized.current
-    const hasNameChanged = name !== prevNameRef.current
-    
-    if (isInitialRender || hasNameChanged) {
-      // Get direct spans from container to ensure we're targeting the right elements
-      const spans = container.querySelectorAll('.animated-char')
-      
-      // Apply animation exactly as provided in the example
-      animate(spans, {
-        // Property keyframes
-        y: [
-          { to: '-2.75rem', ease: 'outExpo', duration: 600 },
-          { to: 0, ease: 'outBounce', duration: 800, delay: 100 }
-        ],
-        // Property specific parameters
-        rotate: {
-          from: '-1turn',
-          delay: 0
-        },
-        delay: (_: unknown, i: number) => i * 50, // Function based value
-        ease: 'inOutCirc',
-        loop: false // Remove looping
-      });
-      
-      animationInitialized.current = true
+    setTypedCount(0)
+    setIsTypingComplete(false)
+
+    timeoutRefs.current.forEach(clearTimeout)
+    timeoutRefs.current = []
+
+    let i = 0
+    const schedule = () => {
+      if (i >= chars.length) {
+        const t = setTimeout(() => setIsTypingComplete(true), CURSOR_VISIBLE_MS)
+        timeoutRefs.current.push(t)
+        return
+      }
+      const t = setTimeout(() => {
+        i += 1
+        setTypedCount(i)
+        schedule()
+      }, TYPING_DELAY_MS)
+      timeoutRefs.current.push(t)
     }
-    
-    prevNameRef.current = name;
+    schedule()
+
+    return () => {
+      timeoutRefs.current.forEach(clearTimeout)
+    }
   }, [name, letters])
 
   return (
-    <div 
-      ref={containerRef}
+    <div
       onClick={onClick}
       className={`inline-block cursor-pointer transition-opacity duration-300 ${className}`}
       style={{ opacity: isTransitioning ? 0 : 1 }}
-    />
+    >
+      <span className={className}>
+        {chars.map((char, i) => (
+          <span key={`${name}-${i}`} className="inline-block">
+            {i < typedCount ? (char === ' ' ? '\u00A0' : char) : null}
+          </span>
+        ))}
+        {!isTypingComplete && (
+          <span className={`inline-block animate-pulse ${className}`}>|</span>
+        )}
+      </span>
+    </div>
   )
 } 

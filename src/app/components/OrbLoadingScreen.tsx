@@ -1,13 +1,16 @@
 'use client'
 
 import { useEffect, useState, useMemo } from 'react'
+import AnimatedName from './AnimatedName'
 
 const ORB_COUNT = 10
 const ANIMATION_DURATION_MS = 4800
 const LOGO_HOLD_MS = 1200
 const FADEOUT_MS = 1400
 const STORAGE_KEY = 'kg_loader_seen'
-const HOME_NAME_COLOR = '#64ffda'
+
+const LOADER_NAME = 'Keerthi Gowda'
+const LOADER_LETTERS = ['K', 'e', 'e', 'r', 't', 'h', 'i', ' ', 'G', 'o', 'w', 'd', 'a']
 
 function getOrbSeed(): number {
   if (typeof window === 'undefined') return 0
@@ -19,7 +22,6 @@ export default function OrbLoadingScreen() {
   const [visible, setVisible] = useState(true)
   const [phase, setPhase] = useState<'loading' | 'logo' | 'exit'>('loading')
   const [logoReveal, setLogoReveal] = useState(false)
-  const [nameColorTransition, setNameColorTransition] = useState(false)
 
   const orbs = useMemo(() => {
     const seed = getOrbSeed()
@@ -50,7 +52,6 @@ export default function OrbLoadingScreen() {
     }
 
     const t0 = setTimeout(() => setLogoReveal(true), 3800)
-    const t0b = setTimeout(() => setNameColorTransition(true), 4500)
     const t1 = setTimeout(() => setPhase('logo'), ANIMATION_DURATION_MS)
     const t2 = setTimeout(() => setPhase('exit'), ANIMATION_DURATION_MS + LOGO_HOLD_MS)
     const t3 = setTimeout(() => {
@@ -60,7 +61,6 @@ export default function OrbLoadingScreen() {
 
     return () => {
       clearTimeout(t0)
-      clearTimeout(t0b)
       clearTimeout(t1)
       clearTimeout(t2)
       clearTimeout(t3)
@@ -104,7 +104,7 @@ export default function OrbLoadingScreen() {
         ))}
       </div>
 
-      {/* Only the name, same position as home; white → light green very slowly */}
+      {/* Name with typing animation, same position as home */}
       <div
         className="relative z-10 flex min-h-screen w-full items-center justify-center text-center pointer-events-none"
         style={{
@@ -112,14 +112,14 @@ export default function OrbLoadingScreen() {
           transition: 'opacity 0.5s ease-out',
         }}
       >
-        <span
-          className="text-4xl md:text-5xl font-bold tracking-tight transition-colors ease-out"
-          style={{
-            color: nameColorTransition ? HOME_NAME_COLOR : 'white',
-            transitionDuration: '2.2s',
-          }}
-        >
-          Keerthi Gowda
+        <span className="text-4xl md:text-5xl font-bold tracking-tight">
+          {logoReveal && (
+            <AnimatedName
+              name={LOADER_NAME}
+              letters={LOADER_LETTERS}
+              className="text-[#64ffda]"
+            />
+          )}
         </span>
       </div>
     </div>
