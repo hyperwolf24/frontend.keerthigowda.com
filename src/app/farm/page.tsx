@@ -92,13 +92,49 @@ export default function Farm() {
               <div className="relative w-[150px] h-[150px] mx-auto mb-4">
                 <Image
                   src="/images/yellow-python.webp"
-                  alt="Yellow Python"
+                  alt="Snakes"
                   fill
                   className="object-cover rounded-full"
                   sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                 />
               </div>
-              <h4 className="text-[#02a57f] text-xl font-semibold mb-2">Turtles & Snakes</h4>
+              <h4 className="text-[#02a57f] text-xl font-semibold mb-2">Snakes</h4>
+            </div>
+          </div>
+
+          <div className="bg-[#112240]/60 backdrop-blur-sm rounded-xl overflow-hidden transition-transform hover:-translate-y-1 shadow-lg p-5 relative">
+            <div className="absolute top-2 right-2 bg-[#02a57f] text-white text-xs px-2 py-1 rounded-full font-medium">
+              Coming Soon
+            </div>
+            <div className="text-center">
+              <div className="relative w-[150px] h-[150px] mx-auto mb-4">
+                <Image
+                  src="/images/turtle.webp"
+                  alt="Turtle"
+                  fill
+                  className="object-cover rounded-full"
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                />
+              </div>
+              <h4 className="text-[#02a57f] text-xl font-semibold mb-2">Turtle</h4>
+            </div>
+          </div>
+
+          <div className="bg-[#112240]/60 backdrop-blur-sm rounded-xl overflow-hidden transition-transform hover:-translate-y-1 shadow-lg p-5 relative">
+            <div className="absolute top-2 right-2 bg-[#02a57f] text-white text-xs px-2 py-1 rounded-full font-medium">
+              Coming Soon
+            </div>
+            <div className="text-center">
+              <div className="relative w-[150px] h-[150px] mx-auto mb-4">
+                <Image
+                  src="/images/pungannur.webp"
+                  alt="Pungannur Cows"
+                  fill
+                  className="object-cover rounded-full"
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                />
+              </div>
+              <h4 className="text-[#02a57f] text-xl font-semibold mb-2">Pungannur Cows</h4>
             </div>
           </div>
         </div>

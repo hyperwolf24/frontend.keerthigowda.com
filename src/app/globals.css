@@ -2,6 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Orb loading screen – materialize, expand, spin, cluster, collapse at focal point */
+@keyframes orb-sequence {
+  0% {
+    opacity: 0;
+    transform: translate(var(--orb-x), var(--orb-y)) scale(0) rotate(0deg);
+  }
+  12% {
+    opacity: 1;
+    transform: translate(var(--orb-x), var(--orb-y)) scale(1) rotate(var(--orb-rotate-start));
+  }
+  28% {
+    opacity: 1;
+    transform: translate(var(--orb-x), var(--orb-y)) scale(1.35) rotate(var(--orb-rotate-mid));
+  }
+  55% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1) rotate(var(--orb-rotate-end));
+  }
+  82% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0) rotate(var(--orb-rotate-end));
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0) rotate(var(--orb-rotate-end));
+  }
+}
+
 :root {
   --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 0, 0, 0;
@@ -25,6 +53,15 @@ html {
   overflow-x: hidden;
   background-color: transparent;
   position: relative;
+}
+
+/* Hide default cursor when custom cursor is active (pointer devices only) */
+body.custom-cursor-active {
+  cursor: none;
+}
+
+body.custom-cursor-active * {
+  cursor: none;
 }
 
 .hero {

@@ -3,6 +3,8 @@ import { IBM_Plex_Mono } from 'next/font/google'
 import './globals.css'
 import Navigation from './components/Navigation'
 import FloatingBubbles from './components/FloatingBubbles'
+import OrbLoadingScreen from './components/OrbLoadingScreen'
+import CustomCursor from './components/CustomCursor'
 
 const ibmPlexMono = IBM_Plex_Mono({
   weight: ['400', '500', '600'],
@@ -87,6 +89,12 @@ export default function RootLayout({
           <div className="relative z-0">
             <FloatingBubbles />
           </div>
+
+          {/* JORIS-style loader: orbs → reveal logo (first visit only) */}
+          <OrbLoadingScreen />
+
+          {/* Custom cursor: black dot + vibrant circle (pointer devices) */}
+          <CustomCursor />
           
           {/* Content layer */}
           <div className="relative z-10 flex flex-col min-h-screen">
