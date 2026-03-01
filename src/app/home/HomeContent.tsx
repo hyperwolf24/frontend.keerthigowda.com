@@ -97,7 +97,7 @@ export default function HomeContent() {
             className="text-[#64ffda]"
           />
         </h1>
-        <p className="text-xl text-[#8892b0]">Engineer | Farmer </p>
+        <p className="text-xl text-[#ccd6f6]">Engineer | Farmer</p>
       </div>
 
       <script

@@ -16,7 +16,7 @@ function getOrbSeed(): number {
 }
 
 export default function OrbLoadingScreen() {
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(true)
   const [phase, setPhase] = useState<'loading' | 'logo' | 'exit'>('loading')
   const [logoReveal, setLogoReveal] = useState(false)
   const [nameColorTransition, setNameColorTransition] = useState(false)
@@ -48,7 +48,6 @@ export default function OrbLoadingScreen() {
       setVisible(false)
       return
     }
-    setVisible(true)
 
     const t0 = setTimeout(() => setLogoReveal(true), 3800)
     const t0b = setTimeout(() => setNameColorTransition(true), 4500)
